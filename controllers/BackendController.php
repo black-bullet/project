@@ -61,15 +61,21 @@ class BackendController extends \yii\web\Controller
             }
               
         }
-        $qa = new \app\models\QuestionAnswer();
+        if (array_key_exists('id', $post)) {
+            QuestionAnswer()::findOne($post['id']);
+            $qa->question=$post['question'];
+            if (array_key_exists('answer', $post))
+                $qa->answer=$post['answer'];
+            $qa->status=$post['status'];
+        } else {
+            $qa = new \app\models\QuestionAnswer();
+            $qa->question=$post['question'];
+            if (array_key_exists('answer', $post))
+                $qa->answer=$post['answer'];
+            $qa->status=$post['status'];
+            $qa->save();    
+        }
         
-    	$qa->question=$post['question'];
-        if (array_key_exists('answer', $post))
-            $qa->answer=$post['answer'];
-        $qa->status=$post['status'];
-        if (array_key_exists('id', $post))
-            $qa->id = $post['id'];
-    	$qa->save(); 
         
         return $qa;
     }
