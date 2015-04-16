@@ -11,7 +11,6 @@ use Yii;
  * @property string $question
  * @property string $answer
  * @property integer $status
- * @property integer $count
  */
 class QuestionAnswer extends \yii\db\ActiveRecord
 {
@@ -29,9 +28,9 @@ class QuestionAnswer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['question', 'count'], 'required'],
-            [['question', 'answer'], 'string'],
-            [['status', 'count'], 'integer']
+            [['question'], 'required'],
+            [['id', 'status'], 'integer'],
+            [['question', 'answer'], 'string']
         ];
     }
 
@@ -45,7 +44,6 @@ class QuestionAnswer extends \yii\db\ActiveRecord
             'question' => 'Question',
             'answer' => 'Answer',
             'status' => 'Status',
-            'count' => 'Count',
         ];
     }
 }

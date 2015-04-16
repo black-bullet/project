@@ -37,7 +37,55 @@ class BackendController extends \yii\web\Controller
         return $qa;
     }
 
-    public function actionQuery1()
+    public function actionAdminQuery()
+    {
+        \Yii::$app->response->format='json';
+
+        $request=Yii::$app->request;
+        $post=$request->getBodyParams();
+
+        //$qa =new \app\models\QuestionAnswer();
+        $questionAdmin = QuestionAnswer::find()
+            ->where(['status' => 3])
+            ->orderBy('id')
+            ->all();
+
+        return $questionAdmin;
+    }
+
+    public function actionTopQuestionQuery()
+    {
+        \Yii::$app->response->format='json';
+
+        $request=Yii::$app->request;
+        $post=$request->getBodyParams();
+
+        $question = QuestionAnswer::find()
+            ->where(['status' => 2])
+            ->orderBy('count DESC')
+            ->limit(10)
+            ->all();
+      
+        return $question;
+    }
+
+    public function actionLast10QuestionQuery()
+    {
+        \Yii::$app->response->format='json';
+
+        $request=Yii::$app->request;
+        $post=$request->getBodyParams();   
+
+        $question = QuestionAnswer::find()
+            ->where(['status' => 2])
+            ->orderBy('id Desc')
+            ->limit(10)
+            ->all();
+
+        return $question;
+    }
+
+    /*public function actionQuery1()
     {
         \Yii::$app->response->format='json';
 
@@ -46,6 +94,7 @@ class BackendController extends \yii\web\Controller
 
         
     }
+    */
 
 
 
