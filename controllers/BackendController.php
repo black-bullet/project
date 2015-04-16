@@ -66,7 +66,23 @@ class BackendController extends \yii\web\Controller
             ->limit(10)
             ->all();
       
-        return $question.;
+        return $question;
+    }
+
+    public function actionLast10QuestionQuery()
+    {
+        \Yii::$app->response->format='json';
+
+        $request=Yii::$app->request;
+        $post=$request->getBodyParams();   
+
+        $question = QuestionAnswer::find()
+            ->where(['status' => 2])
+            ->orderBy('id Desc')
+            ->limit(10)
+            ->all();
+
+        return $question;
     }
 
     /*public function actionQuery1()
