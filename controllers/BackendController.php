@@ -53,6 +53,22 @@ class BackendController extends \yii\web\Controller
         return $questionAdmin;
     }
 
+    public function actionTopQuestionQuery()
+    {
+        \Yii::$app->response->format='json';
+
+        $request=Yii::$app->request;
+        $post=$request->getBodyParams();
+
+        $question = QuestionAnswer::find()
+            ->where(['status' => 2])
+            ->orderBy('count DESC')
+            ->limit(10)
+            ->all();
+      
+        return $question.;
+    }
+
     /*public function actionQuery1()
     {
         \Yii::$app->response->format='json';
