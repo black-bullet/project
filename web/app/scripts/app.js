@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('medclinic', [
+angular.module('chat', [
     'ui.router'
 ])
     .config(function($stateProvider, $urlRouterProvider) {
@@ -11,12 +11,12 @@ angular.module('medclinic', [
         $stateProvider
             .state('chat', {
                 url: '/chat',
-                templateUrl: '../views/chat.html',
+                templateUrl: 'views/chat.html',
                 controller: 'ChatCtrl as ctrl'
             })
             .state('admin', {
                 url: '/admin',
-                templateUrl: '../views/admin.html',
+                templateUrl: 'views/admin.html',
                 controller: 'AdminCtrl as ctrl'
             })
         ;
