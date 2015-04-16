@@ -1,1 +1,116 @@
-<h1>Chat</h1>
+<div class="header">
+		<div class="wrapper">
+			<div class="logo">
+				<img src="../../web/images/logo.png" height="148">
+			</div>
+			<div class="nameSite">
+				<h2>Хмельницький політехнічний коледж</h2>
+				<p>Офіційний сайт</p>
+			</div>
+			<div class="navList">
+				<ul>
+					<li><a href="#">Домашня</a></li>
+					<li><a href="#">Про коледж</a></li>
+					<li><a href="#">Запитання</a></li>
+					<li><a href="#">Курси</a></li>
+					<li><a href="#">Контактна інформація</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="wrapper">
+			<div class="leftContent">
+				<div class="findAnswer">
+					<img src="../../web/images/ask.png" class="searcher">
+					<h3>Знайди відповідь</h3>
+					<p>Запитай онлайн</p>
+				</div>
+				<div class="askIcon">
+					<img src="../../web/images/mans.png">
+				</div>
+			</div>
+			<div class="rightContent">
+				<div class="chatWindow">
+					
+					<form>
+					<div class="headerChat">
+						<span>BRAINCONSULT</span>
+					</div>
+					<div class="supportMan">
+						<img src='../../web/images/admin.png'>
+						<span class="nameAdmin">Вася Робот</span>
+						<span class="positionAdmin">Онлайн-помічник</span>
+					</div>
+					<div class="onlineChat">
+						<div class="onlineAsk" ng-show="ctrl.record.question"><span>{{ ctrl.record.question }}</span></div>
+						<div class="onlineAnswer" ng-show="ctrl.record.answer"><span>{{ ctrl.record.answer }}</span></div>
+					</div>
+						<div class="ask">
+							<input name="ask" ng-model="ctrl.record.question" ng-show="ctrl.record.status == 1">
+							<button name="sendAsk" value="send" type="submit" class="sendAsk" ng-show="ctrl.record.status == 1" ng-click="ctrl.send()">Відправити</button>
+							<button name="sendAsk" value="askMan" class="falseAsk" ng-show="ctrl.record.status == 2" ng-click="ctrl.askHuman()">Спитати людину</button>
+
+						</div>
+						<div class="answer"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="topAnswer">
+		<div class="wrapper">
+			<div class="headerTop">НАЙПОПУЛЯРНІШІ ЗАПИТАННЯ</div>
+			<div class="answerTop">
+				<ul class="ulLeft">
+					<li>
+						<h3>- Які найкращі відділення в коледжі?</h3>
+						<p>- Всі відділення чудові</p>
+					</li>
+					<li>
+						<h3>- Який розмір стипендії?</h3>
+						<p>- Близько 700 грн</p>
+					</li>
+					<li>
+						<h3>- Чи є осінні канікули?</h3>
+						<p>- Ні, не має. Це для школярів</p>
+					</li>
+					<li>
+						<h3>- Скільки викладачів вищої карегорії?</h3>
+						<p>- Близько 20</p>
+					</li>
+					<li>
+						<h3>- Чи є на базі коледжу, якісь курси?</h3>
+						<p>- В коледжі є курси - водіння</p>
+					</li>
+				</ul>
+				<ul class="ulRight">
+					<li>
+						<h3>- Чи є в коледжі тренажерний зал?</h3>
+						<p>- Так, в коледжі є тренажерний зал</p>
+					</li>
+					<li>
+						<h3>- Скільки бюджетних місць на відділенні прогамування?</h3>
+						<p>- Цього року - 40 бюджетних місць</p>
+					</li>
+					<li>
+						<h3>- Які екзамени при вступі потрібно здавати?</h3>
+						<p>- Українська мова і математика</p>
+					</li>
+					<li>
+						<h3>- Які докумнети потрібні при вступі?</h3>
+						<p>- Атесат, додаток до атестату,форма Н**</p>
+					</li>
+					<li>
+						<h3>- Скільки комп*ютерних класів в коледжі?</h3>
+						<p>- 15</p>
+					</li>
+				</ul>
+			</div>		
+		</div>
+	</div>
+	<div class="footer">
+		<div class="wrapper">
+			<span class="copyright">© 2015 ХМЕЛЬНИЦЬКИЙ ПОЛІТЕХНІЧНИЙ КОЛЕДЖ</span>
+		</div>
+	</div>

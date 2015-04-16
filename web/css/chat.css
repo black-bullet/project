@@ -13,7 +13,363 @@ body{
 	font-family: "Open Sans Light";
 	font-size: 44px;
 }
+.header{
+	height: 170px;
+	padding: 0;
+	margin: 0;
+}
+.logo{
+	float: left;
+}
+.nameSite{
+	padding-top: 30px;
+	margin: 0 0 0 150px;
+}
+.nameSite p{
+	font-family: "Open Sans Light";
+	font-size: 14px;
+	margin: 0 0 0 29px;
+}
+.navList{
+	margin: 24px 0 0 130px;
+}
+.navList ul{
+	list-style: none;
+}
+.navList ul li{
+	display: inline;
+	padding: 0 20px 0 10px;
+	font-family: "Open Sans";
+	font-weight: 500;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.navList a{
+	text-decoration: none;
+	color: #363636;
+}
+.navList a:hover{
+	color: #ea5644;
+}
+.nameSite h2{
+	font-family: "Open Sans";
+	font-size: 20px;
+	margin: 0 30px;
+	color: #363636;
+	padding-top: 20px;
+}
+.content{
+	padding-top: 30px;
+	height: 500px;
+	background: red;
+	background: url('../images/congruent_pentagon.png');
+}
+.leftContent{
+	height: 400px;
+	width: 480px;
+	float: left;
+}
+.findAnswer{
+	background: #f3cc0c;
+	height: 80px;
+	width: 440px;
+	margin: 0 auto;
+}
+.searcher{
+	float: left;
+	margin: 17px 15px;
+}
+.findAnswer h3{
+	color: white;
+	font-family: "Open Sans";
+	font-size: 20px;
+	padding-top: 15px;
+	margin-bottom: -10px;
+}
+.findAnswer p{
+	opacity: 0.6;
+	color: black;
+	font-family: "Open Sans";
+	font-size: 13px;
+	margin-left: 46px;
+}
+.askIcon{
+	height: 80px;
+	width: 440px;
+	margin: 30px auto;
+}
+.rightContent{
+	height: 400px;
+	width: 480px;
+	float: right;
+}
+.chatWindow{
+	position: relative;
+	background: #395560;
+	width: 350px;
+	height: 430px;
+	border-top-right-radius: 6px; 
+	border-top-left-radius: 6px;
+	margin: 22px auto;
+}
+.iconsChat{
+	margin: 0 10px;
+	float: right;
+}
+.headerChat{
+	height: 30px;
+	border-bottom: 1px solid #324c57;
+}
+.headerChat span{
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 200;
+	margin: 6px 15px;
+	color: white;
+	float: left;
+}
+.supportMan{
+	height: 80px;
+	border-bottom: 1px solid #324c57;
+}
+.supportMan img{
+	float: left;
+	margin: 22px 10px 22px 15px;
+}
+.onlineChat{
+	margin: 20px auto;
+	height: 150px;
+	width: 350px;
+	
+}
+.headerChat img{
+	float: right;
+	margin: 10px 5px;
+}
+.ask{
+	width: 350px;
+	height: 100px;
+	margin: 0 auto;
+	border-top: 1px solid #324c57;
+}
+.ask .sendAsk{
+	width: 117px;
+	height: 37px;
+	background: #159cd6;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	float: right;
+  	margin-right: 20px;
+  	margin-top: 10px;
+}
+.ask .falseAsk{
+	width: 167px;
+	height: 37px;
+	background: #ea5644;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	float: left;
+  	margin-left: 17px;
+  	margin-top: 10px;
+}
+.ask input{
+	width: 310px;
+	height: 37px;
+	background: #fff;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	color: #333;
+	font-family: "Open Sans";
+	font-weight: 300;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.nameAdmin{
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	text-transform: uppercase;
+}
+.positionAdmin{
+	font-family: "Open Sans";
+	font-size: 12px;
+	font-weight: 300;
+	color: #96a4a9;
+	margin-top: 100px;
+}
+.onlineAsk{
+	background: #c6edfe;
+	width: 226px;
+	margin-left: 20px;
+	font-family: "Open Sans";
+	font-weight: 300px;
+	font-size: 13px;
+	padding: 10px;
+	position: relative;
+}
+.onlineAsk::after{
+	content: ''; 
+    position: absolute;
+    left: -12px;
+    top: 10px;
+    border: 6px solid transparent;	
+    border-right: 6px solid #c6edfe;
+}
+.onlineAsk span{
+	width: 100px;
+	color: #597480;
+}
+.onlineAnswer span{
+	width: 100px;
+	color: #826b3b;
+}
+.onlineAnswer{
+	background: #fcdfa2;
+	width: 226px;
+	float: right;
+	font-family: "Open Sans";
+	font-weight: 300px;
+	font-size: 13px;
+	padding: 10px;
+	margin-top: 20px;
+	margin-right: 20px;
+	position: relative;
+}
+.onlineAnswer::after{
+	content: ''; 
+    position: absolute;
+    right: -12px;
+    top: 10px;
+    border: 6px solid transparent;	
+    border-left: 6px solid #fcdfa2;
+}
+.topAnswer{
+	background: #ea5644;
+	width: 960;
+	height: 800px;
+	margin: 0 auto;
+}
+.headerTop{
+	font-size: 54px;
+	font-family: "Open Sans";
+	color: white;
+	font-weight: 200;
+	width: 805px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+.answerTop{
+	margin-top: 30px;
+}
+.answerTop ul{
+	font-family: "Open Sans";
+	color: #363636;
+}
+.answerTop ul li{
+	margin-bottom: 40px;
+	list-style: none;
+}
+.answerTop ul li p{
+	font-size: 18px;
+	color: white;
+	font-weight: 200;
+}
+
+.ulLeft{
+	float: left;
+	margin:0 0 0 40px;
+	width: 350px;
+}
+.ulRight{
+	width: 350px;
+	float: right;
+	margin:0 80px 0 0;
+
+}
 .footer{
-	font-family: " Sans Bold";
-	font-size: 44px;
+	padding-top: 30px;
+	background: #111;
+	height: 60px;
+}
+.copyright{
+	font-family: "Open Sans";
+	font-size: 12px;
+	color: #5e6061;
+}
+
+
+/*Adminka*/
+
+.headerAdminka h1{
+	font-size: 36px;
+	font-family: "Open Sans";
+	font-weight: 200;
+	margin-top: 0;
+	color: white;
+	padding-top: 20px;
+}
+.headerAdminka{
+	background: #333333;
+	height: 100px;
+}
+.contentAdm{
+	height: 400px;
+	background-image: url('../images/marquee-stars.svg');
+	padding-top: 40px;
+}
+.footerAdm{
+	height: 30px;
+	background: #333;
+}
+.answerAdm{
+	width: 310px;
+	height: 37px;
+	background: #fff;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	color: #333;
+	font-family: "Open Sans";
+	font-weight: 300;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.sendAdm{
+	width: 117px;
+	height: 37px;
+	background: #159cd6;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	float: right;
+  	margin-right: 20px;
+  	margin-top: 10px;
+}
+.contentAdm form{
+	background: #074e68;
+	height: 160px;
+	width: 348px;
+	margin: 0 auto;
+	padding: 10px;
+	}
+.contentAdm form p{
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	margin-left: 18px;
 }

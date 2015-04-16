@@ -1,1 +1,11 @@
-<h1>Admin</h1>
+<accordion close-others="true">
+	<accordion-group ng-repeat="record in ctrl.records">
+	  <accordion-heading>
+	    {{ record.question }}
+	  </accordion-heading>
+	  <form>
+	  	<input type="text" ng-model="record.answer">
+	  	<button type="submit" ng-click="ctrl.send(record)">Відправити</button>
+	  </form>
+	</accordion-group>
+</accordion>

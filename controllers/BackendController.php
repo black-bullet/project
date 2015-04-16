@@ -25,7 +25,7 @@ class BackendController extends \yii\web\Controller
     	$request=Yii::$app->request;
     	$post=$request->getBodyParams();
 
-    	$qa = new \app\models\QuestionAnswer();
+    	
 
         if ($post['status'] == 1) {
             $questions = QuestionAnswer::find()
@@ -37,7 +37,12 @@ class BackendController extends \yii\web\Controller
             $isComparedQuestions = false;
 
             foreach ($questions as $qa) {
-                if (levenshtein($qa->question, $post['question']) <= 10) {
+                if ($qa->question == $post['question']) {
+                    $qa->count++;
+                    $qa->save();
+                    return $qa;
+                }
+                if (levenshtein($qa->question, $post['question']) <= 5) {
                     $comparedQuestions[] = $qa;
                     $isComparedQuestions = true;
                 }
@@ -50,10 +55,13 @@ class BackendController extends \yii\web\Controller
                         $min = $qa;    
                     }
                 }  
+                $min->count++;
+                $min->save();
                 return $min;    
             }
               
         }
+        $qa = new \app\models\QuestionAnswer();
         
     	$qa->question=$post['question'];
         if (array_key_exists('answer', $post))
