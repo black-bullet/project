@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "question_answer".
+ * This is the model class for table "question".
  *
  * @property integer $id
  * @property string $question
@@ -19,7 +19,7 @@ class QuestionAnswer extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'question_answer';
+        return 'question';
     }
 
     /**
@@ -28,7 +28,7 @@ class QuestionAnswer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'question', 'answer'], 'required'],
+            [['question'], 'required'],
             [['id', 'status'], 'integer'],
             [['question', 'answer'], 'string']
         ];
